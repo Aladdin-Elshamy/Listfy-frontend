@@ -18,7 +18,6 @@ export const loginSchema = yup
 export function validateTodo(todo:{title:string}){
   const error = {
     title: "",
-    description: ""
   }
   if(!todo.title?.trim() || todo.title?.length < 5){
     error.title = "Title should be at least 5 charachters"

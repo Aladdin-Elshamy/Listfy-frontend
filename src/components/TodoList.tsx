@@ -29,7 +29,6 @@ export default function TodoList() {
   })
   const [errors,setErrors] = useState({
     title: "",
-    description: ""
   })
 
   const [isUpdating, setIsUpdating] = useState(false)
@@ -48,7 +47,7 @@ export default function TodoList() {
   function closeAddModal() {
     setIsAddModalOpen(false)
     setTodo({title: "", description: ""})
-    setErrors({title: "", description: ""})
+    setErrors({title: ""})
   }
   function openEditModal(todo : ITodo) {
     setEditableTodo(todo)
@@ -58,7 +57,7 @@ export default function TodoList() {
   function closeEditModal() {
     setIsOpen(false)
     setEditableTodo({title: "", description: ""})
-    setErrors({title: "", description: ""})
+    setErrors({title: ""})
   }
   function openConfirmDeleteModal(todo : ITodo) {
     setEditableTodo(todo)
@@ -79,7 +78,6 @@ export default function TodoList() {
     setTodo(prev => ({...prev, [name]: value}))
   }
   async function onSubmitAddHandler(e: FormEvent<HTMLFormElement>){
-    console.log(todo)
     setIsUpdating(true)
     e.preventDefault()
     const {title} = todo
@@ -174,7 +172,7 @@ export default function TodoList() {
     </>
   )
   return (
-      <div>
+      <div className="mb-10">
         <div className="mb-10 flex justify-center gap-4">
           <Button className="w-fit p-3" onClick={openAddModal}>Add Todo</Button>
           <Button className="w-fit p-3" variant={'outline'} size={'sm'} onClick={onGenerateTodos}>Generate Todos</Button>
@@ -200,7 +198,6 @@ export default function TodoList() {
             <div>
 
               <Textarea name="description" placeholder="Description" value={todo.description} onChange={onAddChangeHandler} />
-              {errors.description && <p className="text-red-500">{errors.description}</p>}
             </div>
             <div className="flex gap-4 mt-4">
               <Button className="bg-indigo-700 hover:bg-indigo-800" isLoading={isUpdating}>Save</Button>
@@ -220,7 +217,6 @@ export default function TodoList() {
             <div>
 
               <Textarea name="description" placeholder="Description" value={EditableTodo.description} onChange={onEditChangeHandler} />
-              {errors.description && <p className="text-red-500">{errors.description}</p>}
             </div>
             <div className="flex gap-4 mt-4">
               <Button className="bg-indigo-700 hover:bg-indigo-800" isLoading={isUpdating}>Save</Button>
