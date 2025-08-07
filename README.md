@@ -1,6 +1,6 @@
 # Listfy Todo App
 
-<img width="1920" height="1245" alt="Image" src="https://github.com/user-attachments/assets/16b52f34-a187-4d12-af92-808c08bf1800" />
+<img width="3465" height="1824" alt="Image" src="https://github.com/user-attachments/assets/c28829c4-b9a2-47c1-acf5-204f9f1c3a9a" />
 
 ## Overview
 Listfy is a full-stack to-do application designed to help users manage their tasks efficiently. Users can register, log in, create, edit, delete, and sort their to-dos, with pagination for a seamless experience. The frontend is deployed on Vercel, while the backend is powered by Strapi, a headless CMS, ensuring a robust and scalable architecture.
