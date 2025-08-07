@@ -20,7 +20,8 @@ Listfy is a full-stack to-do application designed to help users manage their tas
 
 ## Tech Stack
 - **Frontend**:
-  - Framework: [React](https://reactjs.org/) (or specify other frontend framework if used)
+  - Framework: [React](https://reactjs.org/)
+  - Language: Typescript
   - Deployment: [Vercel](https://vercel.com/)
   - Styling: Tailwind CSS
 - **Backend**:
